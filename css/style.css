@@ -1,0 +1,57 @@
+/* line 1, scss/style.scss */
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* line 6, scss/style.scss */
+body {
+  background: green; }
+
+/* line 9, scss/style.scss */
+.header {
+  height: 10vh;
+  background: yellow;
+  border: 2px solid; }
+
+/* line 14, scss/style.scss */
+.container {
+  display: grid;
+  height: 90vh;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "first second third"; }
+  /* line 23, scss/style.scss */
+  .container .first-elem, .container .second-elem, .container .third-elem {
+    height: 100%;
+    width: 100%; }
+
+/* line 28, scss/style.scss */
+.first-elem {
+  grid-area: first;
+  background: red; }
+
+/* line 32, scss/style.scss */
+.second-elem {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-area: second; }
+  /* line 38, scss/style.scss */
+  .second-elem .second-elem-a, .second-elem .second-elem-b {
+    height: 100%;
+    width: 100%; }
+
+/* line 43, scss/style.scss */
+.third-elem {
+  grid-area: third;
+  background: white; }
+
+/* line 47, scss/style.scss */
+.second-elem-a {
+  background: orange; }
+
+/* line 50, scss/style.scss */
+.second-elem-a {
+  background: black; }
