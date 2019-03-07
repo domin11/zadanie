@@ -1,57 +1,178 @@
-/* line 1, scss/style.scss */
+/* line 10, scss/style.scss */
 * {
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box; }
 
-/* line 6, scss/style.scss */
+/* line 15, scss/style.scss */
 body {
-  background: green; }
+  background: #058200; }
 
-/* line 9, scss/style.scss */
+/* line 18, scss/style.scss */
 .header {
   height: 10vh;
-  background: yellow;
+  background: #7C8000;
   border: 2px solid; }
 
-/* line 14, scss/style.scss */
+/* line 23, scss/style.scss */
 .container {
   display: grid;
-  height: 90vh;
   width: 100%;
+  height: 90vh;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "first second third"; }
-  /* line 23, scss/style.scss */
+  /* line 32, scss/style.scss */
   .container .first-elem, .container .second-elem, .container .third-elem {
     height: 100%;
     width: 100%; }
+  @media (max-width: 899px) and (min-width: 484px) {
+    /* line 23, scss/style.scss */
+    .container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "first third" "second third"; } }
+  @media (max-width: 583px) {
+    /* line 23, scss/style.scss */
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 4fr;
+      grid-template-areas: "first" "second" "third"; } }
 
-/* line 28, scss/style.scss */
+/* line 53, scss/style.scss */
 .first-elem {
-  grid-area: first;
-  background: red; }
+  grid-area: first; }
 
-/* line 32, scss/style.scss */
+/* line 56, scss/style.scss */
 .second-elem {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-area: second; }
-  /* line 38, scss/style.scss */
+  grid-area: second;
+  margin-top: 30%; }
+  /* line 63, scss/style.scss */
   .second-elem .second-elem-a, .second-elem .second-elem-b {
     height: 100%;
     width: 100%; }
+  @media (max-width: 583px) {
+    /* line 56, scss/style.scss */
+    .second-elem {
+      margin-top: 8%; } }
 
-/* line 43, scss/style.scss */
+/* line 71, scss/style.scss */
 .third-elem {
-  grid-area: third;
-  background: white; }
+  grid-area: third; }
 
-/* line 47, scss/style.scss */
-.second-elem-a {
-  background: orange; }
+/* line 74, scss/style.scss */
+.square {
+  width: 30%;
+  background-color: #F8110A;
+  border: 2px solid;
+  transform: rotate(45deg); }
+  /* line 79, scss/style.scss */
+  .square:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%; }
+  @media (max-width: 583px) {
+    /* line 74, scss/style.scss */
+    .square {
+      width: 20%; } }
 
-/* line 50, scss/style.scss */
-.second-elem-a {
-  background: black; }
+/* line 88, scss/style.scss */
+.square-top {
+  margin-top: 10%;
+  margin-left: 40%; }
+  @media (max-width: 583px) {
+    /* line 88, scss/style.scss */
+    .square-top {
+      margin-top: 5%;
+      margin-left: 30%; } }
+
+/* line 96, scss/style.scss */
+.square-bottom {
+  margin-left: 10%; }
+  @media (max-width: 583px) {
+    /* line 96, scss/style.scss */
+    .square-bottom {
+      margin-left: 10%; } }
+
+/* line 102, scss/style.scss */
+.small-rectangle {
+  height: 22px;
+  width: 75%;
+  border: 2px solid;
+  background: #3900FF; }
+  @media (max-width: 583px) {
+    /* line 102, scss/style.scss */
+    .small-rectangle {
+      width: 100px;
+      height: 12px;
+      margin-right: 100px; } }
+
+/* line 113, scss/style.scss */
+.small-rectangle-top {
+  margin-top: 4%;
+  margin-bottom: 32%; }
+  @media (max-width: 583px) {
+    /* line 113, scss/style.scss */
+    .small-rectangle-top {
+      margin-top: 6%;
+      margin-bottom: 16%; } }
+
+/* line 121, scss/style.scss */
+.small-rectangle-bottom {
+  margin-top: 32%; }
+  @media (max-width: 583px) {
+    /* line 121, scss/style.scss */
+    .small-rectangle-bottom {
+      margin-top: 16%; } }
+
+/* line 127, scss/style.scss */
+.circle {
+  border-radius: 50%;
+  height: auto;
+  width: 60%;
+  margin-left: 1%;
+  padding-bottom: 60%;
+  border: 2px solid;
+  background: #117E7F; }
+  @media (max-width: 583px) {
+    /* line 127, scss/style.scss */
+    .circle {
+      width: 37%;
+      padding-bottom: 37%;
+      margin-left: -32%; } }
+
+/* line 141, scss/style.scss */
+.rectangle {
+  height: 80%;
+  width: 250px;
+  margin-top: 70px;
+  margin-right: 40px;
+  border: 2px solid;
+  text-align: center;
+  background: #FFFFFF; }
+  /* line 149, scss/style.scss */
+  .rectangle h1 {
+    margin-top: 3vh;
+    font-size: 4em;
+    font-family: arial;
+    font-weight: normal;
+    text-transform: uppercase; }
+    @media (max-width: 583px) {
+      /* line 149, scss/style.scss */
+      .rectangle h1 {
+        font-size: 2em; } }
+  @media (max-width: 899px) and (min-width: 484px) {
+    /* line 141, scss/style.scss */
+    .rectangle {
+      background: #C13C39; } }
+  @media (max-width: 583px) {
+    /* line 141, scss/style.scss */
+    .rectangle {
+      background: #3900FF;
+      height: 90%;
+      width: 32%;
+      margin-top: 3%;
+      margin-left: 15%; } }
